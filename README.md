@@ -9,7 +9,11 @@ A lightweight, zero-dependency Python security auditing tool for Linux hosts. In
 - **Drift Engine:** Computes state deltas between a baseline snapshot and live telemetry, returning exit code `1` when unauthorized changes occur.
 
 ## Installation
+
 ```bash
-git clone [https://github.com/Akira-8/host-drift-auditor.git](https://github.com/Akira-8/host-drift-auditor.git)
+git clone https://github.com/Akira-8/host-drift-auditor.git
 cd host-drift-auditor
 pip install .
+```
+
+Requires Python 3.9+ and Linux (it reads `/proc`). Run with `sudo` to read `/etc/shadow`.
