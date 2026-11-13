@@ -5,10 +5,10 @@ import sys
 from datetime import datetime, timezone
 from typing import Any, Dict
 
-from host_auditor.collectors.integrity import SensitiveFileCollector
-from host_auditor.collectors.network import NetworkSocketCollector
-from host_auditor.collectors.suid import PrivilegeSurfaceCollector
-from host_auditor.diff import DriftEngine
+from hostdrift.collectors.integrity import SensitiveFileCollector
+from hostdrift.collectors.network import NetworkSocketCollector
+from hostdrift.collectors.suid import PrivilegeSurfaceCollector
+from hostdrift.diff import DriftEngine
 
 
 def collect_telemetry(scan_dirs=None) -> Dict[str, Any]:
@@ -27,7 +27,7 @@ def collect_telemetry(scan_dirs=None) -> Dict[str, Any]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        prog="host-auditor",
+        prog="hostdrift",
         description="Linux Host Security Telemetry & Configuration Drift Auditor",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)

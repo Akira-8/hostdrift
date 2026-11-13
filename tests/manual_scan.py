@@ -5,9 +5,9 @@ import sys
 # Add src to the Python search path
 sys.path.insert(0, os.path.abspath("src"))
 
-from host_auditor.collectors.suid import PrivilegeSurfaceCollector
-from host_auditor.collectors.network import NetworkSocketCollector
-from host_auditor.collectors.integrity import SensitiveFileCollector
+from hostdrift.collectors.suid import PrivilegeSurfaceCollector
+from hostdrift.collectors.network import NetworkSocketCollector
+from hostdrift.collectors.integrity import SensitiveFileCollector
 
 print("[*] Running Collectors...")
 
